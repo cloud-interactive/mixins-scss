@@ -12,7 +12,7 @@ Just import `mixins.scss` in which scss file you need mixins.
 
 ```scss
 // any.scss
-@import "~/cloud-interactive-mixins-scss/mixins.scss";
+@import "~cloud-interactive-mixins-scss/mixins.scss";
 ```
 
 ## Use sass-resources-loader
