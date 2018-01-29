@@ -1,7 +1,7 @@
 # Installation
 
 ```
-npm i -S git@git.cloud-interactive.com:cloud/mixins/SCSS.git
+npm i -S git@github.com:cloud-interactive/mixins-scss.git
 ```
 
 # Settings
