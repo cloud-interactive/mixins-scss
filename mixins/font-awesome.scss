@@ -1,0 +1,25 @@
+/*
+ * If you intend to use font awesome for icons,
+ * it's necessary to import this url on your own project.
+ * @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+**/
+
+@mixin font-awesome-element($char, $pseudo: "before") {
+  display: inline-block;
+  @include font-awesome-icon($char, $pseudo);
+}
+
+@mixin font-awesome-icon($char, $pseudo: "before") {
+  &:#{$pseudo} {
+    content: $char;
+    @include font-awesome-style;
+  }
+}
+
+@mixin font-awesome-style {
+  font: normal normal normal 1rem/1 FontAwesome;
+  vertical-align: middle;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

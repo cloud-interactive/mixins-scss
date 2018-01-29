@@ -1,0 +1,34 @@
+@mixin triangle-top($color, $width, $height) {
+  $width: $width / 2;
+  $border-width: 0 $width $height $width;
+  @include triangle-style(bottom, $color, $border-width);
+}
+
+@mixin triangle-right($color, $width, $height) {
+  $height: $height / 2;
+  $border-width: $height 0 $height $width;
+  @include triangle-style(left, $color, $border-width);
+}
+
+@mixin triangle-bottom($color, $width, $height) {
+  $width: $width / 2;
+  $border-width: $height $width 0 $width;
+  @include triangle-style(top, $color, $border-width);
+}
+
+@mixin triangle-left($color, $width, $height) {
+  $height: $height / 2;
+  $border-width: $height $width $height 0;
+  @include triangle-style(right, $color, $border-width);
+}
+
+@mixin triangle-style($opposite-position, $color, $border-width) {
+  // Requires inline-block or block for proper styling
+
+  width: 0;
+  height: 0;
+  border-width: $border-width;
+  border-style: solid;
+  border-color: transparent;
+  border-#{$opposite-position}-color: $color;
+}

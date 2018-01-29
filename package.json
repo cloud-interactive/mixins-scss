@@ -1,0 +1,22 @@
+{
+  "name": "cloud-interactive-mixins-scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cloud-interactive/mixins-scss.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "http://github.com:cloud-interactive/mixins-scss/issues"
+  },
+  "author": "patrick.tsai@cloud-interactive.com",
+  "homepage": "http://github.com:cloud-interactive/mixins-scss#readme",
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}

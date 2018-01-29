@@ -1,0 +1,37 @@
+@mixin cross-element($color, $weight: 1px, $length: 100%) {
+  color: $color;
+
+  &:before,
+  &:after {
+    @include cross-style($weight, $length);
+  }
+
+  &:before {
+    @include cross-left;
+  }
+
+  &:after {
+    @include cross-right;
+  }
+}
+
+@mixin cross-style($weight: 1px, $length: 100%) {
+  // Requires color property for proper styling
+
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $length;
+  height: $weight;
+  background-color: currentColor;
+  transform-origin: 0 0;
+}
+
+@mixin cross-left {
+  transform: rotate(45deg) translate(-50%, -50%);
+}
+
+@mixin cross-right {
+  transform: rotate(-45deg) translate(-50%, -50%);
+}

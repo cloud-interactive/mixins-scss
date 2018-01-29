@@ -1,0 +1,16 @@
+/**
+ * To prevent parent with float child collapse
+ * See [A new micro clearfix hack](http://nicolasgallagher.com/micro-clearfix-hack/)
+ */
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
