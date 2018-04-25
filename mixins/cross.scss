@@ -3,6 +3,7 @@
 
   &:before,
   &:after {
+    content: "";
     @include cross-style($weight, $length);
   }
 
